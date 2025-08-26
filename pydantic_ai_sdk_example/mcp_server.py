@@ -5,7 +5,7 @@ app = FastMCP()
 
 @app.tool()
 def stuff_duy_is_into() -> str:
-    return "Duy is into politics, pizza, and the Pythagoras theorem."
+    return "Duy is into politics, pizzas, and the Pythagoras theorem."
 
 
 @app.tool()
