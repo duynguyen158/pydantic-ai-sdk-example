@@ -28,7 +28,13 @@ make setup
 
 ### Running example scripts
 
-Scripts are located inside the `scripts` directory. For example, to run `scripts/pydantic_mcp.py`:
+1. If you script requires access to the local MCP server, start it first:
+
+```zsh
+make start-mcp-server
+```
+
+2. Scripts are located inside the `scripts` directory. For example, to run `scripts/pydantic_mcp.py`:
 
 ```zsh
 uv run scripts/pydantic_mcp.py
