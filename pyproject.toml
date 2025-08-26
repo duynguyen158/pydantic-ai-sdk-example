@@ -1,0 +1,43 @@
+[project]
+name = "pydantic-ai-sdk-example"
+version = "0.1.0"
+description = "Example code getting agents & MCPs to work using Pydantic AI SDK"
+authors = [
+    {name = "Duy Nguyen", email = "57234880+duynguyen158@users.noreply.github.com"}
+]
+readme = "README.md"
+requires-python = ">= 3.12"
+dependencies = []
+
+[dependency-groups]
+dev = [
+    "pytest>=8.3.3",
+]
+
+[tool.ruff.lint]
+select = [
+    "E", # pycodestyle
+    "F", # Pyflakes
+    "UP", # pyupgrade
+    "B", # flake8-bugbear
+    "SIM", # flake8-simplify
+    "I", # isort
+]
+ignore = [
+    "E501", # line too long
+]
+
+[tool.ruff.lint.isort]
+# If specifying known third-party packages is useful, e.g., so that isort works correctly, uncomment and fill in the list below.
+# known-third-party = []
+combine-as-imports = true
+
+[tool.pyright]
+venvPath = "."
+venv = "./.venv"
+include = ["pydantic_ai_sdk_example", "tests"]
+typeCheckingMode = "strict"
+reportUnknownVariableType = false
+reportUnknownMemberType = false
+reportUnknownLambdaType = false
+reportUnknownArgumentType = false
