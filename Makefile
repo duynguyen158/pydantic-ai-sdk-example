@@ -37,7 +37,7 @@ install: install-terraform install-python install-ollama-models # Install all de
 setup: login install # Setup the project
 
 # DEVELOPMENT
-.PHONY: format format-% lint lint-% test test-%
+.PHONY: format format-% lint lint-% test test-% start start-%
 
 format-terraform: # Format Terraform code
 	@echo "Terraform infrastructure-as-code is not enabled in this project."
@@ -60,5 +60,8 @@ test-python: # Run Python tests
 	uv run pytest
 
 test: test-python # Run all tests
+
+start-mcp-server: # Start local MCP server for script-testing
+	uv run pydantic_ai_sdk_example/mcp_server.py
 
 # DEPLOYMENT
