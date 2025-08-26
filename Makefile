@@ -29,7 +29,10 @@ install-python: # Install Python packages
 	uv tool install pyright --upgrade
 	uvx pyright --version
 
-install: install-terraform install-python # Install all dependencies
+install-ollama-models: # Install Ollama models
+	ollama pull qwen3:4b-thinking-2507-q4_K_M
+
+install: install-terraform install-python install-ollama-models # Install all dependencies
 
 setup: login install # Setup the project
 
