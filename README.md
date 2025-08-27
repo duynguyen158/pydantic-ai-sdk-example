@@ -28,7 +28,7 @@ make setup
 
 ### Running example scripts
 
-1. If you script requires access to the local MCP server, start it first:
+1. If your script requires access to the local MCP server, start it first:
 
 ```zsh
 make start-mcp-server
